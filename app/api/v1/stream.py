@@ -58,7 +58,7 @@ async def realtime_stream(websocket: WebSocket) -> None:
 
             # 4. Reply
             await websocket.send_json({
-                "has_two_faces": face_count == 2,
+                "has_two_faces": face_count > 1,
                 "face_count": face_count,
             })
 
